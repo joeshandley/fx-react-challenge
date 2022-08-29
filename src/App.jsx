@@ -29,7 +29,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Header />
-        <main>
+        <main className="main">
           <section>
             <Routes>
               <Route path={"/"} element={<Home showsData={showsData} />} />

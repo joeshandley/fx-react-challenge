@@ -13,7 +13,7 @@ const Show = ({ showsData }) => {
 
   return (
     <main className="show">
-      <article className="show__left">
+      <article className="show--left">
         <h1 className="show__title">{show.name}</h1>
         <img
           className="show__image"
@@ -21,7 +21,10 @@ const Show = ({ showsData }) => {
           alt="show image"
         />
       </article>
-      <p className="show__description">{show.summary.slice(3, -4)}</p>
+      <article className="show--right">
+        <h2>Summary:</h2>
+        <p className="show__description">{show.summary.slice(3, -4)}</p>
+      </article>
     </main>
   );
 };

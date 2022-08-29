@@ -1,20 +1,26 @@
 .show {
   display: flex;
   flex-direction: row;
-  margin: 0 10px;
 }
 
-.show__left {
+.show--left {
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
+}
+
+.show--right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.2rem;
+}
+
+.show__title {
+  width: 100%;
+  margin-bottom: 1.2rem;
 }
 
 .show__image {
   width: auto;
   height: 300px;
-}
-
-.show__description {
-  margin-top: 60px;
+  padding-right: 6.4rem;
 }
