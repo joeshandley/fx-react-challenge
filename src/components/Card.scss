@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+}
+
+.card:hover {
+  background-color: #d5c6e0;
+}
+
+.card__name:hover {
+  color: #a833b9;
+  text-decoration: underline;
+}

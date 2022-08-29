@@ -1,21 +1,50 @@
+/* CSS resets */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: circle;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 15px 0;
-  border-bottom: 1px solid grey;
-}
-
-nav {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
+  background-color: #ebeee9;
 }
 
 main {
@@ -28,4 +57,3 @@ main section {
   width: 100%;
   max-width: 1200px;
 }
-

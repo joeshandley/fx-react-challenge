@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.6rem;
+  border-bottom: 1px solid grey;
+}
+
+.header__nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header__link {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+}
+
+.header__link:hover {
+  background-color: #ccddb7;
+}

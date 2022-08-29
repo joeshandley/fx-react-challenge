@@ -1,0 +1,20 @@
+.show {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+}
+
+.show__left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.show__image {
+  width: auto;
+  height: 300px;
+}
+
+.show__description {
+  margin-top: 60px;
+}

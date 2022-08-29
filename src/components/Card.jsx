@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Card.scss";
 
 /**
  * This should be a React component that, at the very least, comprises an image component a title and a description or subheading.
@@ -11,18 +12,7 @@ import { Link } from "react-router-dom";
 const Card = ({ id, image, name, genres }) => {
   return (
     <Link to={`/show/${id}`}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "15px",
-          color: "#333",
-          border: "solid 1px #333",
-          borderRadius: "5px",
-        }}
-      >
+      <div className="card">
         <div
           style={{
             width: "90%",
@@ -32,7 +22,7 @@ const Card = ({ id, image, name, genres }) => {
             backgroundPosition: "center",
           }}
         ></div>
-        <h1>{name}</h1>
+        <h2 className="card__name">{name}</h2>
         <ul>
           {genres.map((role) => (
             <li key={role}>{role}</li>
