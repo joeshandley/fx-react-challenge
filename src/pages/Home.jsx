@@ -6,14 +6,13 @@ export const Home = ({ showsData }) => {
 
   const getCards = () => {
     const cards = showsData.map((show, i) => {
-      console.log(show);
       return (
         <Card
           key={i}
+          id={i}
           image={show.show.image.medium}
           name={show.show.name}
-          home_port={show.show.type}
-          roles={show.show.genres}
+          genres={show.show.genres}
         />
       );
     });
