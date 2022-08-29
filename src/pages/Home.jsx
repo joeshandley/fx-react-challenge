@@ -1,29 +1,47 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../components/Card";
-import dummyData from "../dummyData.json"; // To be replaced with your api response data
 
 export const Home = () => {
-  const [elephantData, setElephantData] = useState([]);
+  const [showsData, setShowsData] = useState([]);
+  const [showsCards, setShowsCards] = useState([]);
 
-  const getElephants = async () => {
+  const getTvShows = async () => {
     try {
       const res = await axios.get(
-        "https://elephant-api.herokuapp.com/elephants/random"
+        "https://api.tvmaze.com/search/shows?q=green"
       );
-      setElephantData(res.data);
+      setShowsData(res.data);
+      console.log(res.data);
+      getCards(res.data);
     } catch (err) {
       console.error("Error:", err);
     }
   };
 
+  const getCards = (shows) => {
+    const cards = shows.map((show, i) => {
+      console.log(show);
+      return (
+        <Card
+          key={i}
+          image={show.show.image.medium}
+          name={show.show.name}
+          home_port={show.show.type}
+          roles={show.show.genres}
+        />
+      );
+    });
+    setShowsCards(cards);
+  };
+
   useEffect(() => {
-    getElephants();
+    getTvShows();
   }, []);
 
   return (
     <>
-      <h1>Space X Ships</h1>
+      <h1>TV Shows</h1>
       <div
         className="App"
         style={{
@@ -33,18 +51,7 @@ export const Home = () => {
           columnGap: "20px",
         }}
       >
-        <Card
-          image={dummyData.image}
-          name={dummyData.name}
-          home_port={dummyData.home_port}
-          roles={dummyData.roles}
-        />
-        {/* <Card
-          image={elephantData.image}
-          name={elephantData.name}
-          home_port={elephantData.affiliation}
-          roles={elephantData.species}
-        /> */}
+        {showsCards}
       </div>
     </>
   );
