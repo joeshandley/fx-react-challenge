@@ -18,10 +18,7 @@ class App extends Component {
             <section>
               <Routes>
                 <Route path={"/"} element={<Home />} />
-<<<<<<< HEAD
-=======
                 <Route path={"show"} element={<div>Show</div>} />
->>>>>>> fix-routing
               </Routes>
             </section>
           </main>
