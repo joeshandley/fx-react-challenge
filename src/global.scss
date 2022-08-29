@@ -1,0 +1,21 @@
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ebeee9;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 1.6rem;
+  /* width: 100vw; */
+}
+
+.main section {
+  width: 100%;
+  max-width: 1200px;
+}

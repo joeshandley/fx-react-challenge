@@ -8,13 +8,15 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: white;
-}
 
-.card:hover {
-  background-color: #d5c6e0;
-}
+  &:hover {
+    background-color: #d5c6e0;
+  }
 
-.card__name:hover {
-  color: #a833b9;
-  text-decoration: underline;
+  &__name {
+    &:hover {
+      color: #a833b9;
+      text-decoration: underline;
+    }
+  }
 }
