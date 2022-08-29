@@ -1,26 +1,11 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Card from "../components/Card";
 
-export const Home = () => {
-  const [showsData, setShowsData] = useState([]);
+export const Home = ({ showsData }) => {
   const [showsCards, setShowsCards] = useState([]);
 
-  const getTvShows = async () => {
-    try {
-      const res = await axios.get(
-        "https://api.tvmaze.com/search/shows?q=green"
-      );
-      setShowsData(res.data);
-      console.log(res.data);
-      getCards(res.data);
-    } catch (err) {
-      console.error("Error:", err);
-    }
-  };
-
-  const getCards = (shows) => {
-    const cards = shows.map((show, i) => {
+  const getCards = () => {
+    const cards = showsData.map((show, i) => {
       console.log(show);
       return (
         <Card
@@ -36,8 +21,8 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    getTvShows();
-  }, []);
+    getCards();
+  }, [showsData]);
 
   return (
     <>
