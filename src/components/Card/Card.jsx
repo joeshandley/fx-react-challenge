@@ -17,7 +17,7 @@ const Card = ({ id, image, name, genres }) => {
           {image ? <img className="card__img" src={image} /> : null}
         </div>
         <h2 className="card__name">{name}</h2>
-        <ul>
+        <ul className="card__genres">
           {genres.map((role) => (
             <li key={role}>{role}</li>
           ))}
