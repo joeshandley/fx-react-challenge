@@ -32,8 +32,9 @@ const App = () => {
 
   const searchSubmitHandler = (e) => {
     e.preventDefault();
-    sessionStorage.setItem("searchQuery", trim(e.target.query.value));
-    setSearchQuery(trim(e.target.query.value));
+    const query = e.target.query.value.trim();
+    sessionStorage.setItem("searchQuery", query);
+    setSearchQuery(query);
   };
 
   useEffect(() => {
