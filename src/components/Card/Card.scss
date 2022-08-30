@@ -13,6 +13,20 @@
     background-color: #d5c6e0;
   }
 
+  &__img-container {
+    background-color: grey;
+    width: 90%;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+    // background-size: cover;
+    // background-position: center;
+  }
+
   &__name {
     &:hover {
       color: #a833b9;

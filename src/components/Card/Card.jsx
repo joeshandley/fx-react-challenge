@@ -13,15 +13,9 @@ const Card = ({ id, image, name, genres }) => {
   return (
     <Link to={`/show/${id}`}>
       <div className="card">
-        <div
-          style={{
-            width: "90%",
-            height: "200px",
-            backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        <div className="card__img-container">
+          {image ? <img className="card__img" src={image} /> : null}
+        </div>
         <h2 className="card__name">{name}</h2>
         <ul>
           {genres.map((role) => (

@@ -11,7 +11,7 @@ export const Home = ({ showsData, searchSubmitHandler }) => {
         <Card
           key={i}
           id={i}
-          image={show.show.image.medium}
+          image={show.show.image ? show.show.image.medium : null}
           name={show.show.name}
           genres={show.show.genres}
         />
