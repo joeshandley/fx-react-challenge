@@ -1,0 +1,49 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+$font-stack: Verdana, Geneva, Tahoma, sans-serif;
+
+body {
+  font-family: $font-stack;
+}
+
+h1 {
+  @include font-sizing(2.4rem, 3.2rem, 700);
+
+  @include med-lrg() {
+    @include font-sizing(3.3rem, 4.4rem, 700);
+  }
+}
+
+h2 {
+  @include font-sizing(2rem, 2.6rem, 700);
+
+  @include med-lrg() {
+    @include font-sizing(2.4rem, 3.2rem, 700);
+  }
+}
+
+h3 {
+  @include font-sizing(1.3rem, 1.8rem, 700);
+
+  @include med-lrg() {
+    @include font-sizing(1.4rem, 2.2rem, 700);
+  }
+}
+
+p,
+input,
+textarea {
+  font-family: $font-stack;
+  @include font-sizing(1.3rem, 1.8rem, 400);
+
+  @include med-lrg() {
+    @include font-sizing(1.4rem, 2.2rem, 400);
+  }
+}
+
+button,
+label {
+  font-family: $font-stack;
+  @include font-sizing(1.6rem, 2.2rem, 700);
+}

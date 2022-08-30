@@ -1,0 +1,19 @@
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+body {
+  background-color: $backgroundWhite;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 1.6rem 1.6rem 3.2rem;
+}
+
+.main section {
+  width: 100%;
+  max-width: 1200px;
+}
