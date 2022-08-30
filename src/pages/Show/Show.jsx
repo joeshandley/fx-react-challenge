@@ -27,9 +27,11 @@ const Show = ({ showsData }) => {
         />
       </article>
       <article className="show--right">
-        <p className="show__rating">
-          <b>Rating:</b> {show.rating.average}/10
-        </p>
+        {show.rating.average ? (
+          <p className="show__rating">
+            <b>Rating:</b> {show.rating.average}/10
+          </p>
+        ) : null}
         <h2 className="show__subtitle">Summary:</h2>
         <p className="show__description">
           {show.summary.slice(3, -4).replace("<b>", "").replace("</b>", "")}

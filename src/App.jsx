@@ -8,11 +8,12 @@ import "./global.scss";
 
 const App = () => {
   const [showsData, setShowsData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("low");
 
   const getTvShows = async () => {
     try {
       const res = await axios.get(
-        "https://api.tvmaze.com/search/shows?q=green"
+        `https://api.tvmaze.com/search/shows?q=${searchQuery}`
       );
       setShowsData(res.data);
       console.log(res.data);
@@ -21,9 +22,14 @@ const App = () => {
     }
   };
 
+  const searchSubmitHandler = (e) => {
+    e.preventDefault();
+    setSearchQuery(e.target.query.value);
+  };
+
   useEffect(() => {
     getTvShows();
-  }, []);
+  }, [searchQuery]);
 
   return (
     <>
@@ -32,7 +38,15 @@ const App = () => {
         <main className="main">
           <section>
             <Routes>
-              <Route path={"/"} element={<Home showsData={showsData} />} />
+              <Route
+                path={"/"}
+                element={
+                  <Home
+                    showsData={showsData}
+                    searchSubmitHandler={searchSubmitHandler}
+                  />
+                }
+              />
               <Route
                 path={"show/:id"}
                 element={<Show showsData={showsData} />}
