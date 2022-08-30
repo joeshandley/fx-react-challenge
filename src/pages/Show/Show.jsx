@@ -14,7 +14,12 @@ const Show = ({ showsData }) => {
   return (
     <main className="show">
       <article className="show--left">
-        <h1 className="show__title">{show.name}</h1>
+        <h1 className="show__title">
+          {show.name}
+          {show.premiered && show.ended
+            ? `: ${show.premiered.substr(0, 4)} - ${show.ended.substr(0, 4)}`
+            : ""}
+        </h1>
         <img
           className="show__image"
           src={show.image.original}

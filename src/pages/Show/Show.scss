@@ -1,10 +1,17 @@
+@use "../../partials/mixins" as *;
+
 .show {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @include med-lrg {
+    flex-direction: row;
+  }
 
   &--left {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   &--right {
@@ -19,8 +26,10 @@
   }
 
   &__image {
-    width: auto;
-    height: 300px;
-    padding-right: 6.4rem;
+    width: 70vw;
+    border-radius: 5px;
+
+    // height: 300px;
+    // padding-right: 6.4rem;
   }
 }
