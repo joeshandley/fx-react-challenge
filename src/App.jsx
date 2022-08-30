@@ -8,7 +8,14 @@ import "./global.scss";
 
 const App = () => {
   const [showsData, setShowsData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("low");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const getQuery = () => {
+    if (!sessionStorage.getItem("searchQuery")) {
+      sessionStorage.setItem("searchQuery", "green");
+    }
+    setSearchQuery(sessionStorage.getItem("searchQuery"));
+  };
 
   const getTvShows = async () => {
     try {
@@ -24,12 +31,21 @@ const App = () => {
 
   const searchSubmitHandler = (e) => {
     e.preventDefault();
+    sessionStorage.setItem("searchQuery", e.target.query.value);
     setSearchQuery(e.target.query.value);
   };
 
   useEffect(() => {
+    getQuery();
+  }, []);
+
+  useEffect(() => {
     getTvShows();
   }, [searchQuery]);
+
+  if (searchQuery === "") {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
