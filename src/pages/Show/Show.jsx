@@ -27,8 +27,16 @@ const Show = ({ showsData }) => {
         />
       </article>
       <article className="show--right">
-        <h2>Summary:</h2>
-        <p className="show__description">{show.summary.slice(3, -4)}</p>
+        <p className="show__rating">
+          <b>Rating:</b> {show.rating.average}/10
+        </p>
+        <h2 className="show__subtitle">Summary:</h2>
+        <p className="show__description">
+          {show.summary.slice(3, -4).replace("<b>", "").replace("</b>", "")}
+        </p>
+        <a className="show__more-info" href={show.url}>
+          More info
+        </a>
       </article>
     </main>
   );
