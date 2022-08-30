@@ -14,12 +14,12 @@ const Show = ({ showsData }) => {
   return (
     <main className="show">
       <article className="show--left">
-        <h1 className="show__title">
-          {show.name}
+        <h1 className="show__title">{show.name}</h1>
+        <h2 className="show__subtitle">
           {show.premiered && show.ended
-            ? `: ${show.premiered.substr(0, 4)} - ${show.ended.substr(0, 4)}`
+            ? `${show.premiered.substr(0, 4)} - ${show.ended.substr(0, 4)}`
             : ""}
-        </h1>
+        </h2>
         {show.image ? (
           <img
             className="show__img"

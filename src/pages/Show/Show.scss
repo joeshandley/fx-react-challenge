@@ -11,27 +11,41 @@
   &--left {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    @include med-lrg {
+      margin-right: 3.2rem;
+    }
   }
 
   &--right {
     display: flex;
     flex-direction: column;
-    // margin-top: 3.2rem;
+
+    @include med-lrg {
+      margin-top: 9rem;
+    }
   }
 
   &__title {
     width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  &__subtitle {
     margin-bottom: 1.2rem;
   }
 
   &__img {
     width: 70vw;
+    max-width: 350px;
     border-radius: 5px;
     margin-bottom: 2.4rem;
+    align-self: center;
 
-    // height: 300px;
-    // padding-right: 6.4rem;
+    @include med-lrg {
+      width: 300px;
+      padding-right: 6.4rem;
+    }
 
     &--not-found {
       background-color: grey;
