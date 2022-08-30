@@ -8,23 +8,24 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: white;
+  transition: 0.1s;
 
   &:hover {
     background-color: #d5c6e0;
+    transform: scale(1.02);
   }
 
   &__img-container {
     background-color: grey;
-    width: 90%;
-    height: 200px;
+    // width: 90%;
+    max-width: 210px;
+    height: 295px;
     border-radius: 5px;
     overflow: hidden;
   }
 
   &__img {
     object-fit: cover;
-    // background-size: cover;
-    // background-position: center;
   }
 
   &__name {

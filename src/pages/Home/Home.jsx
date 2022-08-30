@@ -29,17 +29,7 @@ export const Home = ({ showsData, searchSubmitHandler }) => {
     <>
       <h1 className="home__title">TV Shows</h1>
       <Search searchSubmitHandler={searchSubmitHandler} />
-      <div
-        className="App"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          rowGap: "10px",
-          columnGap: "20px",
-        }}
-      >
-        {showsCards}
-      </div>
+      <div className="home__cards">{showsCards}</div>
     </>
   );
 };

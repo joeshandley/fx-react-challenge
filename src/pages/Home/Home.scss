@@ -1,5 +1,22 @@
+@use "../../partials/mixins" as *;
+
 .home {
   &__title {
     margin-bottom: 1.2rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+
+    @include sml {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include med-lrg {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
