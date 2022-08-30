@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Search from "../components/Search/Search";
-import Card from "../components/Card/Card";
+import Search from "../../components/Search/Search";
+import Card from "../../components/Card/Card";
+import "./Home.scss";
 
 export const Home = ({ showsData, searchSubmitHandler }) => {
   const [showsCards, setShowsCards] = useState([]);
@@ -26,7 +27,7 @@ export const Home = ({ showsData, searchSubmitHandler }) => {
 
   return (
     <>
-      <h1>TV Shows</h1>
+      <h1 className="home__title">TV Shows</h1>
       <Search searchSubmitHandler={searchSubmitHandler} />
       <div
         className="App"

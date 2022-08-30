@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  margin-bottom: 1.2rem;
+
+  &__label {
+    margin-right: 0.8rem;
+  }
+
+  &__input {
+    margin-left: 0.8rem;
+  }
+}
