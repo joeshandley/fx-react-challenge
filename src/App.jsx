@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Show from "./pages/Show/Show";
+import Footer from "./components/Footer/Footer";
 import "./global.scss";
 
 const App = () => {
@@ -70,6 +71,7 @@ const App = () => {
             </Routes>
           </section>
         </main>
+        <Footer />
       </BrowserRouter>
     </>
   );
