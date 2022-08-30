@@ -1,3 +1,5 @@
+@use "../../partials/variables" as *;
+
 .header {
   display: flex;
   justify-content: center;
@@ -21,5 +23,5 @@
 }
 
 .header__link:hover {
-  background-color: #ccddb7;
+  background-color: $navGreen;
 }

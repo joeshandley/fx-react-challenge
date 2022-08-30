@@ -1,3 +1,5 @@
+@use "../../partials/variables" as *;
+
 .card {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@
   transition: 0.1s;
 
   &:hover {
-    background-color: #d5c6e0;
+    background-color: $cardPurple;
     transform: scale(1.02);
   }
 
@@ -31,7 +33,7 @@
   &__name {
     margin-bottom: 0.8rem;
     &:hover {
-      color: #a833b9;
+      color: purple;
       text-decoration: underline;
     }
   }
