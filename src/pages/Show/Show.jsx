@@ -20,11 +20,15 @@ const Show = ({ showsData }) => {
             ? `: ${show.premiered.substr(0, 4)} - ${show.ended.substr(0, 4)}`
             : ""}
         </h1>
-        <img
-          className="show__image"
-          src={show.image.original}
-          alt="show image"
-        />
+        {show.image ? (
+          <img
+            className="show__img"
+            src={show.image.original}
+            alt="show image"
+          />
+        ) : (
+          <div className="show__img--not-found">Image not found</div>
+        )}
       </article>
       <article className="show--right">
         {show.rating.average ? (
